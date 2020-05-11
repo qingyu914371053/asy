@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssy.asy.dao.UserDao1">
+
+	<resultMap id="BaseResultMap" type="com.ssy.asy.entity.User">
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="lastname" jdbcType="VARCHAR" property="lastname" />
+        <result column="workcode" jdbcType="VARCHAR" property="workcode" />
+        <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+        <result column="email" jdbcType="VARCHAR" property="email" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
+        <result column="jobtitles" jdbcType="VARCHAR" property="jobtitles" />
+        <result column="joblevel" jdbcType="VARCHAR" property="joblevel" />
+        <result column="department" jdbcType="INTEGER" property="department" />
+        <result column="subcompany" jdbcType="INTEGER" property="subcompany" />
+    </resultMap>
+
+	<select id="getUser" resultType="com.ssy.asy.entity.User">
+		select * from User 
+		where id = #{id}
+	</select>
+	
+</mapper>
